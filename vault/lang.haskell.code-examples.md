@@ -1,7 +1,7 @@
 ---
 id: knqxow7iosykbnfq66fbun3
-title: Code examples
-desc: ""
+title: Code Examples
+desc: ''
 updated: 1647703836123
 created: 1647604160948
 ---
