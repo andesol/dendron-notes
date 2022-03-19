@@ -83,7 +83,7 @@ publishing:
     - root
   writeStubs: false
   siteRootDir: docs
-  assetsPrefix: /dendron-notes
+  assetsPrefix: /notes
   siteUrl: https://andesol.github.io
   seo:
     title: Notes
