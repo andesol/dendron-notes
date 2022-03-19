@@ -1,0 +1,22 @@
+{
+  "name": "dendron-notes",
+  "version": "1.0.0",
+  "description": "Some unpolished notes about programming, etc.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andesol/dendron-notes.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/andesol/dendron-notes/issues"
+  },
+  "homepage": "https://github.com/andesol/dendron-notes#readme",
+  "dependencies": {
+    "@dendronhq/dendron-cli": "^0.86.0"
+  }
+}

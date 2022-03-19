@@ -83,8 +83,8 @@ publishing:
     - root
   writeStubs: false
   siteRootDir: docs
-  siteUrl: https://andesol.github.io
   assetsPrefix: /dendron-notes
+  siteUrl: https://andesol.github.io
   seo:
     title: Notes
     description: Unpolished notes about programming and whatnot.
