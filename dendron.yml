@@ -83,7 +83,8 @@ publishing:
     - root
   writeStubs: false
   siteRootDir: docs
-  assetsPrefix: /notes
+  # name of the repo
+  assetsPrefix: /vault
   siteUrl: https://andesol.github.io
   seo:
     title: Notes
