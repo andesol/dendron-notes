@@ -1,0 +1,61 @@
+<h1 id="types"><a aria-hidden="true" class="anchor-heading" href="#types"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Types</h1>
+<p>It's a good practice in Haskell to write explicitly the types and not to rely exclusively on inference.</p>
+<h2 id="basic-types"><a aria-hidden="true" class="anchor-heading" href="#basic-types"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Basic Types</h2>
+<ul>
+<li>Bool</li>
+<li>Char</li>
+<li>String</li>
+<li>Int</li>
+<li>Float</li>
+</ul>
+<h2 id="list-types"><a aria-hidden="true" class="anchor-heading" href="#list-types"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>List Types</h2>
+<p>List is a sequence of values of the same type</p>
+<pre class="language-hs"><code class="language-hs"><span class="token punctuation">[</span><span class="token constant">False</span><span class="token punctuation">,</span> <span class="token constant">True</span><span class="token punctuation">,</span> <span class="token constant">False</span><span class="token punctuation">]</span> <span class="token operator">::</span> <span class="token punctuation">[</span><span class="token constant">Bool</span><span class="token punctuation">]</span>
+<span class="token punctuation">[</span><span class="token char string">'a'</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token char string">'b'</span><span class="token punctuation">,</span> <span class="token char string">'c'</span><span class="token punctuation">]</span><span class="token punctuation">]</span> <span class="token operator">::</span> <span class="token punctuation">[</span><span class="token constant">Char</span><span class="token punctuation">]</span>
+</code></pre>
+<h2 id="tuples"><a aria-hidden="true" class="anchor-heading" href="#tuples"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Tuples</h2>
+<p>A tuple is a sequence of values of different <strong>types</strong></p>
+<pre class="language-hs"><code class="language-hs"><span class="token punctuation">(</span><span class="token constant">False</span><span class="token punctuation">,</span> <span class="token constant">True</span><span class="token punctuation">)</span> <span class="token operator">::</span> <span class="token punctuation">(</span><span class="token constant">Bool</span><span class="token punctuation">,</span> <span class="token constant">Bool</span><span class="token punctuation">)</span>
+<span class="token punctuation">(</span><span class="token constant">False</span><span class="token punctuation">,</span> <span class="token char string">'a'</span><span class="token punctuation">,</span> <span class="token constant">True</span><span class="token punctuation">)</span> <span class="token operator">::</span> <span class="token punctuation">(</span><span class="token constant">Bool</span><span class="token punctuation">,</span> <span class="token constant">Char</span><span class="token punctuation">,</span> <span class="token constant">Bool</span><span class="token punctuation">)</span>
+</code></pre>
+<p>The type of a tuple encodes it's size (unlike lists). Types unrestricted.</p>
+<pre class="language-hs"><code class="language-hs"><span class="token punctuation">(</span><span class="token char string">'a'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token constant">False</span><span class="token punctuation">,</span> <span class="token char string">'b'</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">::</span> <span class="token punctuation">(</span><span class="token constant">Char</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token constant">Bool</span><span class="token punctuation">,</span> <span class="token constant">Char</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token punctuation">(</span><span class="token constant">True</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token char string">'a'</span><span class="token punctuation">,</span> <span class="token char string">'b'</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token operator">::</span> <span class="token punctuation">(</span><span class="token constant">Bool</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token constant">Char</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+</code></pre>
+<h2 id="function-types"><a aria-hidden="true" class="anchor-heading" href="#function-types"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Function Types</h2>
+<p>A function is a mapping between two types</p>
+<pre><code>not :: Bool -> Bool
+</code></pre>
+<ul>
+<li>Polymorphic functions:</li>
+</ul>
+<p>a ~= any (or b or c), p. e:</p>
+<pre><code>length :: [a] -> Int
+</code></pre>
+<ul>
+<li>Overloaded functions: a polymorphic function is overloaded if its type contain one or more class constrainsts, e.g.</li>
+</ul>
+<pre><code>(+) :: Num a => a -> a -> a
+</code></pre>
+<p>(a has to be a numberic type)</p>
+<ul>
+<li>Num: Numeric types (+)</li>
+<li>Eq: equality types (==)</li>
+<li>Ord: ordered types (&#x3C;)</li>
+</ul>
+<h2 id="type-declarations"><a aria-hidden="true" class="anchor-heading" href="#type-declarations"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Type declarations</h2>
+<pre class="language-hs"><code class="language-hs"><span class="token keyword">type</span> <span class="token constant">Pos</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token constant">Int</span><span class="token punctuation">,</span> <span class="token constant">Int</span><span class="token punctuation">)</span>
+
+<span class="token hvariable">origin</span> <span class="token operator">::</span> <span class="token constant">Pos</span>
+<span class="token hvariable">origin</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">)</span>
+
+<span class="token hvariable">left</span> <span class="token operator">::</span> <span class="token constant">Pos</span> <span class="token operator">-></span> <span class="token constant">Pos</span>
+<span class="token hvariable">left</span> <span class="token punctuation">(</span><span class="token hvariable">x</span><span class="token punctuation">,</span><span class="token hvariable">y</span><span class="token punctuation">)</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token hvariable">x</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token hvariable">y</span><span class="token punctuation">)</span>
+</code></pre>
+<p>We can use params:</p>
+<pre class="language-hs"><code class="language-hs"><span class="token keyword">type</span> <span class="token constant">Pair</span> <span class="token hvariable">a</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token hvariable">a</span><span class="token punctuation">,</span> <span class="token hvariable">a</span><span class="token punctuation">)</span>
+
+
+<span class="token hvariable">mult</span><span class="token operator">::</span> <span class="token constant">Pair</span> <span class="token constant">Int</span> <span class="token operator">-></span> <span class="token constant">Int</span>
+<span class="token hvariable">mult</span> <span class="token punctuation">(</span><span class="token hvariable">m</span><span class="token punctuation">,</span><span class="token hvariable">n</span><span class="token punctuation">)</span> <span class="token operator">=</span> <span class="token hvariable">m</span><span class="token operator">*</span><span class="token hvariable">n</span>
+</code></pre>

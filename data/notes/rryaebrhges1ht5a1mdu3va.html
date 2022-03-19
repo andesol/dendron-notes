@@ -1,0 +1,44 @@
+<h1 id="high-order-functions"><a aria-hidden="true" class="anchor-heading" href="#high-order-functions"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>High order functions</h1>
+<p>Useful?</p>
+<ul>
+<li>
+<p>Domain specific languages can be defined as collections of higher-order functions.</p>
+</li>
+<li>
+<p>We can use albgebraic reasoning to understand programs.</p>
+</li>
+</ul>
+<h2 id="map"><a aria-hidden="true" class="anchor-heading" href="#map"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Map</h2>
+<pre class="language-hs"><code class="language-hs"><span class="token builtin">map</span> <span class="token operator">::</span> <span class="token punctuation">(</span><span class="token hvariable">a</span> <span class="token operator">-></span> <span class="token hvariable">b</span><span class="token punctuation">)</span> <span class="token operator">-></span> <span class="token punctuation">[</span><span class="token hvariable">a</span><span class="token punctuation">]</span> <span class="token operator">-></span> <span class="token punctuation">[</span><span class="token hvariable">b</span><span class="token punctuation">]</span>
+
+<span class="token operator">></span> <span class="token builtin">map</span> <span class="token punctuation">(</span><span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">)</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">]</span>
+<span class="token operator">></span> <span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">4</span><span class="token punctuation">,</span><span class="token number">5</span><span class="token punctuation">]</span>
+</code></pre>
+<h2 id="filter"><a aria-hidden="true" class="anchor-heading" href="#filter"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Filter</h2>
+<pre class="language-hs"><code class="language-hs"><span class="token builtin">filter</span> <span class="token operator">::</span> <span class="token punctuation">(</span><span class="token hvariable">a</span> <span class="token operator">-></span> <span class="token constant">Bool</span><span class="token punctuation">)</span> <span class="token operator">-></span> <span class="token punctuation">[</span><span class="token hvariable">a</span><span class="token punctuation">]</span> <span class="token operator">-></span> <span class="token punctuation">[</span><span class="token hvariable">a</span><span class="token punctuation">]</span>
+
+<span class="token operator">></span> <span class="token builtin">filter</span> <span class="token builtin">even</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token number">4</span><span class="token punctuation">]</span>
+<span class="token operator">></span> <span class="token punctuation">[</span><span class="token number">4</span><span class="token punctuation">]</span>
+</code></pre>
+<h2 id="foldr"><a aria-hidden="true" class="anchor-heading" href="#foldr"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Foldr</h2>
+<pre class="language-hs"><code class="language-hs"><span class="token comment">-- Pattern</span>
+<span class="token hvariable">f</span> <span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token hvariable">v</span>
+<span class="token hvariable">f</span> <span class="token punctuation">(</span><span class="token hvariable">x</span><span class="token operator">:</span><span class="token hvariable">xs</span><span class="token punctuation">)</span> <span class="token operator">=</span> <span class="token hvariable">x</span> ⊕ <span class="token hvariable">f</span> <span class="token hvariable">xs</span>
+
+
+<span class="token comment">--Example</span>
+<span class="token builtin">sum</span> <span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token number">0</span>
+<span class="token builtin">sum</span> <span class="token punctuation">(</span><span class="token hvariable">x</span><span class="token operator">:</span><span class="token hvariable">xs</span><span class="token punctuation">)</span> <span class="token operator">=</span> <span class="token hvariable">x</span> <span class="token operator">+</span> <span class="token builtin">sum</span> <span class="token hvariable">xs</span>
+
+<span class="token builtin">product</span> <span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token number">1</span>
+<span class="token builtin">product</span> <span class="token punctuation">(</span><span class="token hvariable">x</span><span class="token operator">:</span><span class="token hvariable">xs</span><span class="token punctuation">)</span> <span class="token operator">=</span> <span class="token hvariable">x</span> <span class="token operator">*</span> <span class="token builtin">product</span> <span class="token hvariable">xs</span>
+
+<span class="token builtin">and</span> <span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token constant">True</span>
+<span class="token builtin">and</span> <span class="token punctuation">(</span><span class="token hvariable">x</span><span class="token operator">:</span><span class="token hvariable">xs</span><span class="token punctuation">)</span> <span class="token operator">=</span> <span class="token hvariable">x</span> <span class="token operator">&#x26;&#x26;</span> <span class="token builtin">and</span> <span class="token hvariable">xs</span>
+
+
+<span class="token comment">-- These operations can be defined using foldr (hof)</span>
+<span class="token builtin">sum</span> <span class="token operator">=</span> <span class="token builtin">foldr</span> <span class="token punctuation">(</span><span class="token operator">+</span><span class="token punctuation">)</span> <span class="token number">0</span>
+<span class="token builtin">product</span> <span class="token operator">=</span> <span class="token builtin">foldr</span> <span class="token punctuation">(</span><span class="token operator">*</span><span class="token punctuation">)</span> <span class="token number">1</span>
+<span class="token operator">...</span>
+</code></pre>

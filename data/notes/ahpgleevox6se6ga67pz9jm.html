@@ -1,0 +1,11 @@
+<h1 id="curry"><a aria-hidden="true" class="anchor-heading" href="#curry"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Curry</h1>
+<p>Curried functions are more flexible, because the can be partially applied.</p>
+<p>Currying conventions</p>
+<ul>
+<li>The arrow associates to the right.</li>
+</ul>
+<pre class="language-hs"><code class="language-hs"><span class="token constant">Int</span> <span class="token operator">-></span> <span class="token constant">Int</span> <span class="token operator">-></span> <span class="token constant">Int</span>
+</code></pre>
+<p>Means:</p>
+<pre class="language-hs"><code class="language-hs"><span class="token constant">Int</span> <span class="token operator">-></span> <span class="token punctuation">(</span><span class="token constant">Int</span> <span class="token operator">-></span> <span class="token constant">Int</span><span class="token punctuation">)</span>
+</code></pre>

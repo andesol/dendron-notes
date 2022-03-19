@@ -1,0 +1,136 @@
+{
+  "roots": [
+    {
+      "key": "6hycu8o8696a4tqfk3yixvz",
+      "title": "andesol / Notes",
+      "icon": null,
+      "hasTitleNumberOutlined": false,
+      "vaultName": "vault",
+      "children": [
+        {
+          "key": "ohq0k0ofojwl0mcabqvn1ri",
+          "title": "Daily",
+          "icon": null,
+          "hasTitleNumberOutlined": false,
+          "vaultName": "vault",
+          "children": []
+        },
+        {
+          "key": "cgw8zy2pphkvk8pp1rxndxr",
+          "title": "Functional Programming",
+          "icon": null,
+          "hasTitleNumberOutlined": false,
+          "vaultName": "vault",
+          "children": []
+        },
+        {
+          "key": "zu16j6vkw8ndf9n4zj98cmh",
+          "title": "Languages",
+          "icon": null,
+          "hasTitleNumberOutlined": false,
+          "vaultName": "vault",
+          "children": [
+            {
+              "key": "ojnogx9md793ue6tbc59sdd",
+              "title": "Haskell",
+              "icon": null,
+              "hasTitleNumberOutlined": false,
+              "vaultName": "vault",
+              "children": [
+                {
+                  "key": "wr1563xdvyid5r24jbauio3",
+                  "title": "Basic Syntax",
+                  "icon": null,
+                  "hasTitleNumberOutlined": false,
+                  "vaultName": "vault",
+                  "children": []
+                },
+                {
+                  "key": "knqxow7iosykbnfq66fbun3",
+                  "title": "Code Examples",
+                  "icon": null,
+                  "hasTitleNumberOutlined": false,
+                  "vaultName": "vault",
+                  "children": []
+                },
+                {
+                  "key": "c03uvsi96v74u6tzpxbatm5",
+                  "title": "Conditional",
+                  "icon": null,
+                  "hasTitleNumberOutlined": false,
+                  "vaultName": "vault",
+                  "children": []
+                },
+                {
+                  "key": "ahpgleevox6se6ga67pz9jm",
+                  "title": "Curry",
+                  "icon": null,
+                  "hasTitleNumberOutlined": false,
+                  "vaultName": "vault",
+                  "children": []
+                },
+                {
+                  "key": "rryaebrhges1ht5a1mdu3va",
+                  "title": "High order functions",
+                  "icon": null,
+                  "hasTitleNumberOutlined": false,
+                  "vaultName": "vault",
+                  "children": []
+                },
+                {
+                  "key": "r5i1tpbbbq4mbhi35y5j5xw",
+                  "title": "Recursion",
+                  "icon": null,
+                  "hasTitleNumberOutlined": false,
+                  "vaultName": "vault",
+                  "children": []
+                },
+                {
+                  "key": "ufecyaom0fymki0oaiok6ac",
+                  "title": "Resources",
+                  "icon": null,
+                  "hasTitleNumberOutlined": false,
+                  "vaultName": "vault",
+                  "children": []
+                },
+                {
+                  "key": "okwmwowey1lkgncwzccfrpw",
+                  "title": "Set Up",
+                  "icon": null,
+                  "hasTitleNumberOutlined": false,
+                  "vaultName": "vault",
+                  "children": []
+                },
+                {
+                  "key": "p2t6nyat9y9t6xeapp0wawq",
+                  "title": "Types",
+                  "icon": null,
+                  "hasTitleNumberOutlined": false,
+                  "vaultName": "vault",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "child2parent": {
+    "403": null,
+    "6hycu8o8696a4tqfk3yixvz": null,
+    "zu16j6vkw8ndf9n4zj98cmh": "6hycu8o8696a4tqfk3yixvz",
+    "ojnogx9md793ue6tbc59sdd": "zu16j6vkw8ndf9n4zj98cmh",
+    "p2t6nyat9y9t6xeapp0wawq": "ojnogx9md793ue6tbc59sdd",
+    "okwmwowey1lkgncwzccfrpw": "ojnogx9md793ue6tbc59sdd",
+    "ufecyaom0fymki0oaiok6ac": "ojnogx9md793ue6tbc59sdd",
+    "r5i1tpbbbq4mbhi35y5j5xw": "ojnogx9md793ue6tbc59sdd",
+    "rryaebrhges1ht5a1mdu3va": "ojnogx9md793ue6tbc59sdd",
+    "ahpgleevox6se6ga67pz9jm": "ojnogx9md793ue6tbc59sdd",
+    "c03uvsi96v74u6tzpxbatm5": "ojnogx9md793ue6tbc59sdd",
+    "knqxow7iosykbnfq66fbun3": "ojnogx9md793ue6tbc59sdd",
+    "wr1563xdvyid5r24jbauio3": "ojnogx9md793ue6tbc59sdd",
+    "cgw8zy2pphkvk8pp1rxndxr": "6hycu8o8696a4tqfk3yixvz",
+    "ohq0k0ofojwl0mcabqvn1ri": "6hycu8o8696a4tqfk3yixvz"
+  }
+}

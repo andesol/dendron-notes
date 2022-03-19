@@ -1,0 +1,15 @@
+<h1 id="conditional"><a aria-hidden="true" class="anchor-heading" href="#conditional"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Conditional</h1>
+<h2 id="if--then--else"><a aria-hidden="true" class="anchor-heading" href="#if--then--else"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>if ... then ... else</h2>
+<pre class="language-hs"><code class="language-hs"><span class="token builtin">abs</span> <span class="token operator">::</span> <span class="token constant">Int</span> <span class="token operator">-></span> <span class="token constant">Int</span>
+<span class="token builtin">abs</span> <span class="token hvariable">n</span> <span class="token operator">=</span> <span class="token keyword">if</span> <span class="token hvariable">n</span> <span class="token operator">>=</span> <span class="token number">0</span> <span class="token keyword">then</span> <span class="token hvariable">n</span> <span class="token keyword">else</span> <span class="token operator">-</span><span class="token hvariable">n</span>
+</code></pre>
+<p>Alternatively:</p>
+<h2 id="guarded-equations"><a aria-hidden="true" class="anchor-heading" href="#guarded-equations"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Guarded Equations</h2>
+<pre class="language-hs"><code class="language-hs"><span class="token builtin">abs</span> <span class="token hvariable">n</span> <span class="token operator">|</span> <span class="token hvariable">n</span> <span class="token operator">>=</span> <span class="token number">0</span>    <span class="token operator">=</span> <span class="token hvariable">n</span>
+      <span class="token operator">|</span> <span class="token builtin">otherwise</span> <span class="token operator">=</span> <span class="token operator">-</span><span class="token hvariable">n</span>
+</code></pre>
+<h2 id="pattern-matching"><a aria-hidden="true" class="anchor-heading" href="#pattern-matching"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Pattern Matching</h2>
+<pre class="language-hs"><code class="language-hs"><span class="token builtin">not</span> <span class="token operator">::</span> <span class="token constant">Bool</span> <span class="token operator">-></span> <span class="token constant">Bool</span>
+<span class="token builtin">not</span> <span class="token constant">False</span> <span class="token operator">=</span> <span class="token constant">True</span>
+<span class="token builtin">not</span> <span class="token constant">True</span> <span class="token operator">=</span> <span class="token constant">False</span>
+</code></pre>
