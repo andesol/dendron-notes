@@ -87,8 +87,8 @@ publishing:
   assetsPrefix: /vault
   siteUrl: https://andesol.github.io
   seo:
-    title: Notes
-    description: Unpolished notes about programming and whatnot.
+    title: andesol / Notes
+    description: Notes about programming
   github:
     enableEditLink: true
     editLinkText: Edit this page on GitHub
