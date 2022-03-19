@@ -2,7 +2,7 @@
 id: ufecyaom0fymki0oaiok6ac
 title: Resources
 desc: ""
-updated: 1647444194894
+updated: 1647691812854
 created: 1647429116055
 ---
 
@@ -11,3 +11,5 @@ created: 1647429116055
 - [Learn you a Haskell](http://learnyouahaskell.com/chapters)
 
 - [Functional programming in Haskell](https://www.youtube.com/watch?v=a0fPHkzK36I&list=PLF1Z-APd9zK7usPMx3LGMZEHrECUGodd3&index=1)
+
+- [Helsinki University Haskell](MOOChttps://haskell.mooc.fi/)

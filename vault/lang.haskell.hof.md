@@ -2,7 +2,7 @@
 id: rryaebrhges1ht5a1mdu3va
 title: High order functions
 desc: ""
-updated: 1647606682199
+updated: 1647691840772
 created: 1647605343632
 ---
 
@@ -49,7 +49,7 @@ and [] = True
 and (x:xs) = x && and xs
 
 
--- Eixes operacions poden ser definides en termes de foldr (hof)
+-- These operations can be defined using foldr (hof)
 sum = foldr (+) 0
 product = foldr (*) 1
 ...

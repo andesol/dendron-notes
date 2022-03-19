@@ -2,11 +2,11 @@
 id: ahpgleevox6se6ga67pz9jm
 title: Curry
 desc: ""
-updated: 1647534280514
+updated: 1647691765351
 created: 1647533946299
 ---
 
-Curried functions are more flexible, because you can partially apply them.
+Curried functions are more flexible, because the can be partially applied.
 
 Currying conventions
 

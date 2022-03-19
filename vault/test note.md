@@ -2,7 +2,7 @@
 id: optwtubm595w6azhv6q1ub8
 title: Test Note
 desc: ""
-updated: 1647209888837
+updated: 1647692130724
 created: 1647172300537
 ---
 
@@ -10,8 +10,7 @@ created: 1647172300537
 
 ## Links
 
-- You can use [[web.frontend.react]]
--
+- You can use links: [[lang.haskell]]
 
 ## Code
 

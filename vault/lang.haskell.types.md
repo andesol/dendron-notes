@@ -2,7 +2,7 @@
 id: p2t6nyat9y9t6xeapp0wawq
 title: Types
 desc: ""
-updated: 1647535012220
+updated: 1647692197714
 created: 1647532191271
 ---
 
@@ -34,7 +34,7 @@ A tuple is a sequence of values of different **types**
 (False, 'a', True) :: (Bool, Char, Bool)
 ```
 
-The type of a tuple encodes it's size (a diferència de una _list_). Types unrestricted.
+The type of a tuple encodes it's size (unlike lists). Types unrestricted.
 
 ```hs
 ('a', (False, 'b')) :: (Char, (Bool, Char))
@@ -68,3 +68,25 @@ length :: [a] -> Int
 - Num: Numeric types (+)
 - Eq: equality types (==)
 - Ord: ordered types (<)
+
+## Type declarations
+
+```hs
+type Pos = (Int, Int)
+
+origin :: Pos
+origin = (0,0)
+
+left :: Pos -> Pos
+left (x,y) = (x-1,y)
+```
+
+We can use params:
+
+```hs
+type Pair a = (a, a)
+
+
+mult:: Pair Int -> Int
+mult (m,n) = m*n
+```
