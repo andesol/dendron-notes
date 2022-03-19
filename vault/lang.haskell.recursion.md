@@ -2,13 +2,11 @@
 id: r5i1tpbbbq4mbhi35y5j5xw
 title: Recursion
 desc: ""
-updated: 1647691780752
+updated: 1647705341090
 created: 1647602437869
 ---
 
-En Haskell no pots escriure loops, així que cal tirar de recursion sí o sí.
-
-Why is it useful?
+## Why is it useful?
 
 Some functions are simpler to write in terms of other functions (e.g. factorial)
 
